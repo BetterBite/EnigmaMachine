@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for Enigma machine rotors.",
+
+  "type": "object",
+
+  "properties": {
+    "mapping": {
+      "type": "string",
+      "description": "Mapping of characters from A-Z to a random permutation.",
+      "minLength": 26,
+      "maxLength": 26
+
+    },
+    "notch": {
+      "type": ["string", "null"],
+      "description": "Notch position which would force the next rotor to step. Rotors designed for being in the last position do not have a notch position encoded. Can have multiple notch positions."
+    }
+  }
+}
